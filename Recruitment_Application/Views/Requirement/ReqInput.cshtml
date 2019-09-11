@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "ReqInput";
+}
+
+<link rel="stylesheet" href="~/Content/ReqPage.css" />
+
+
+    <form >
+        <link rel="stylesheet" href="~/Content/slideshow.css" />
+
+        
+        <h2>ReqInput</h2>
+        <div>
+
+
+            <br />
+            <br />
+
+            <br />
+            <label>Buiseness Unit</label>
+            <br />
+            <label>Java Developers</label>
+            <input type="number" min=0 placeholder="Requirements" class="form-control" /><br />
+            <label>.Net Developers</label>
+            <input type="number" min=0 placeholder="Requirements" class="form-control" /><br />
+            <label>Buiseness Analyst</label>
+            <input type="number" min=0 placeholder="Requirements" class="form-control" /><br />
+
+            <br />
+            <button type="button" class="btn btn-primary">Request</button>
+
+
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="~/Content/slideimage1.jpg" style="width:60%">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="~/Content/slideimage2.jpg" style="width:50%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+        </div>
+        <img src="~/Content/slideimage3.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="~/Content/slideimage4.png" style="width:50%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="~/Content/slideimage5.jpg" style="width:80%">
+            <div class="text">Caption Three</div>
+        </div>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </form>
+   
+     <script>
+           var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+             var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    </script>
+
